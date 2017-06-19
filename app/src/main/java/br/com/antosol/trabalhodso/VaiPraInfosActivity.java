@@ -55,17 +55,31 @@ public class VaiPraInfosActivity extends AppCompatActivity {
                     }
                 });
             } else {
-                ImageView poster = (ImageView) findViewById(R.id.poster);
-                poster.setImageResource(R.drawable.mumia);
-                Button trailer = (Button) findViewById(R.id.trailer);
-                trailer.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        String videoId = "IjHgzkQM2Sg";
-                        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("vnd.youtube:"+videoId));
-                        startActivity(intent);
-                    }
-                });
+                if(filme.getTitulo().equals("BayWatch - SOS Malibu")) {
+                    ImageView poster = (ImageView) findViewById(R.id.poster);
+                    poster.setImageResource(R.drawable.baywatch);
+                    Button trailer = (Button) findViewById(R.id.trailer);
+                    trailer.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            String videoId = "K8YQGq6wS-I";
+                            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("vnd.youtube:" + videoId));
+                            startActivity(intent);
+                        }
+                    });
+                } else {
+                    ImageView poster = (ImageView) findViewById(R.id.poster);
+                    poster.setImageResource(R.drawable.mumia);
+                    Button trailer = (Button) findViewById(R.id.trailer);
+                    trailer.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            String videoId = "IjHgzkQM2Sg";
+                            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("vnd.youtube:" + videoId));
+                            startActivity(intent);
+                        }
+                    });
+                }
             }
         }
 

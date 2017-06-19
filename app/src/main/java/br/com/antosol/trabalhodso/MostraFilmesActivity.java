@@ -37,6 +37,18 @@ public class MostraFilmesActivity extends AppCompatActivity {
             }
         });
 
+        Button localizacao = (Button) findViewById(R.id.localizacao);
+        localizacao.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = getIntent();
+                Cinema cinema = (Cinema) intent.getSerializableExtra("cinema");
+                Intent intentMostraMapa = new Intent(MostraFilmesActivity.this, MapsActivity.class);
+                intentMostraMapa.putExtra("cinema", cinema);
+                startActivity(intentMostraMapa);
+            }
+        });
+
         listaFilmes.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> lista, View item, int pos, long l) {
@@ -46,6 +58,8 @@ public class MostraFilmesActivity extends AppCompatActivity {
                 startActivity(intentVaiPraInfos);
             }
         });
+
+
 
 
     }
