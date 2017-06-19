@@ -114,6 +114,14 @@ public class MainActivity extends AppCompatActivity {
 
         Cinema cinema2 = new Cinema(filmes2, -48.6461949,-27.6139039, "Cinepolis-Continente");
         cinemas.add(cinema2);
+
+        //-27.584509
+
+        ArrayList<Filme> filmes3 = new ArrayList<>();
+        filmes3.add(filme);
+        filmes3.add(filme3);
+        Cinema cinema3 = new Cinema(filmes3, -48.545375 ,-27.584509, "Cineville-Beiramar");
+        cinemas.add(cinema3);
         return cinemas;
     }
 }
