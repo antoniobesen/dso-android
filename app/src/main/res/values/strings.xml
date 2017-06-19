@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TrabalhoDSO</string>
+    <string-array name="cinemas">
+        <item>
+
+        </item>
+    </string-array>
+    <string name="title_activity_maps">Map</string>
+</resources>
